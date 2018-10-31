@@ -1,0 +1,8 @@
+abfinfo			prints some info from abf header
+abfplot.sh		
+chcalc			basic channel arithmetics
+chint			integrate activity [of a segment] subtructing baseline
+dumpdata		dump raw binary data in desired channel
+opncurve		calc I vs p (pressure/suction) hystogram
+statstates		calc p for every dwell time interval
+dwt-suctHyst	calc "3D" hyst: dwt vs p vs counts

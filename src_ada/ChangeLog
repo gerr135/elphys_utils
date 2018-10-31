@@ -1,0 +1,23 @@
+realignfrags
+	1.0	first "release". Will not compile with updated Atf_IO
+	1.1 some cosmetic and readability changes. Works with generic Atf_IO
+		both 1.0 and 1.1 do alignment only down to single step. No submks alignment
+	
+	2.0 rewamped version, does above search followed by sub-step realignment
+		sub-step is done by fitting Boltzman's to the epsiodes (seems to fit hardware responce nicely)
+		and then moving stuff around
+	2.1 added -v and -k parameters, to limit what episodes get written out based
+		on how well their fit was. Added -y to fit to smoothed curves (realign 
+		original data)
+	2.2 Added -u parameter, to specify individul boundaries for the fit part (maxDiff
+		search is then done on wider area)
+		+ some parameter consistency checks
+	starting 3.0 series - will do template search as 1st step instead of simple max diff
+
+
+fit_transitions
+	1.0 (12 Sep 2003) first release. Fits to single Boltzman's, supports all regular flags
+	1.1 (13 Sep 2003) added check for TooDistorted - to skip the fit. 
+	1.1.01 (19 Sep 2003) save of intermediate variant before largely revamping source
+	1.2 (?? Sep 2003) added fit by double-boltzman
+	1.3 (28 Sep 2003) starting 1.3 - will add output filters from realign_frags

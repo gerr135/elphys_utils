@@ -1,0 +1,13 @@
+SUBDIRS = lib util
+
+all:
+	for subdir in ${SUBDIRS}; do \
+		echo "Making in $$subdir"; \
+		(cd $$subdir && make) \
+    done; 
+
+clean:
+	for subdir in ${SUBDIRS}; do \
+		echo "Making in $$subdir"; \
+		(cd $$subdir && make clean) \
+    done; 

@@ -1,0 +1,4 @@
+A set of utils to process ATF (Axon Text File) format files.. Was used for smaller data fragments (with atf files taking ~10x space of abf files, and 1G+ raw data, even now that is not the most pleasant thing to do. Back then it was out of the question).
+
+A small TODO item: they all use "old style" getopt commandline parsing. Should be changed to use argparse
+instead of course (if I ever need this code again, or get around to it for some reason).

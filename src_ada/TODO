@@ -1,0 +1,15 @@
+1. algorithmic:
+	add least chi2,
+	combine in 2-step alg: maxder -> min chi2
+	smoothed template fitting
+2. bindings
+	gsl bindings
+
+
+Programs:
+realignfrags
+	if direction is given, more checks for divergence  -  done
+	check what's skipped if omitting maxDiff part      - checked, all is already done
+	add template search:
+		use sliding boltzman, seek max fit
+		inputs: seeked amplitude (fixed), dx is taken default or from seedign option

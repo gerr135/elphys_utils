@@ -1,0 +1,30 @@
+This is a collection of really old code of mine for processing electrophysiological data.
+This is a really specific code, and I did not touch it ever since I got some old work done
+and published. Right now it would likely require a bit of effort to even get it off the
+ground and compile properly. So, bug me if you think you can use this functionality, I'll
+try to get to it (or, in case I need this again). Storing this on github as potentially
+useful code that I might get back to..
+
+This project consists of 3 parts, all separated under sbdirs:
+src_ada:  the principal part of it.
+  This contains Ada code that was used in processing the data at the time. Requires
+  cleanup and rearrangement.
+
+src_c: few utils to get raw (binary) data out and do some basic calciulations on it.
+Older   than Ada code.
+
+atf_py: some common utils to work with ATF files in python.
+  ATF - Axon Text File format - the text representation of the raw data. Simpler to work
+  with, but takes ~10x space. At that time (when I was a Caltech PhD student, past
+  millenium), the HDD space and RAM were rather limited, so processing 1G+ (original raw,
+  which would make it 10G+ in text) files was pretty much out of the question. These were
+  useful for smaller fragments of the data or some integral statistics.
+
+
+To build simply run make.
+
+Requirements:
+1. Ada enabled gcc or some version of gnat.
+
+2. Installed abf_io component (you should have got it at the same place as this one)
+and abf_io.gpr symlink pointing to abf_io.gpr in that component's dir.

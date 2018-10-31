@@ -1,0 +1,23 @@
+1. Fix abf output (so that the lib can read it, worry about axon later) - done, even Axon opens, but only data..
+2. find_peaks
+	reads abf, atf or text (t-rows ',' separated)  -- abf only - need the waveform
+	finds peaks in selected region
+2.1		direct, q-pline smoothed -- ditched splines - not much difference from raw
+2.2		fit with some function   -- fits expanded: parabola-baseline; model (very sensitive to seeds)
+
+3. sort out leak subtraction  -- done, as much as possible - not much can be done about screwy data..
+
+4. Fits:
+	4.1 parabolic - immediate baseline
+	4.2 model ( A*(1 - exp((-t/tm)^P)) * (h - (h-1)*exp(-t/th)) )
+
+5. leaksub: provide option to force 0 tails? (for the bad data that cannot be helped?) -- instead added few more opts, such as to calc averages over prepulse pad
+
+6. leaksub: add gaussian filtering at set freq (default to sampling/10 - assuming 5x oversampling) before everything
+	(to smooth out controls - too much error for dV correction)
+
+7. leaksub: lowpass filter control step heavily..
+	- only usefull for subtraction and only after C-spikes settled..
+	(so not much use in the region of interest)
+
+8. leaksub: drop slow inactivation tails and calculate dV and other params from step tails..

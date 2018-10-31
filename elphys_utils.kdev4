@@ -1,4 +1,4 @@
 [Project]
-Name=elphys_utils_ada
+Name=elphys_utils
 Manager=KDevCustomMakeManager
 VersionControl=kdevgit
